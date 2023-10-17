@@ -122,6 +122,9 @@ odoo.define("web_edit_user_filter/static/src/js/backend.js", function (require) 
                     facet.isActive == true
                 );
             });
+            if (!selectedFacet.length) {
+                return;
+            }
             if (facet_type == "favorite") {
                 var FavFacets = [];
                 var currentFacet = self.model.get(
